@@ -1,0 +1,73 @@
+body{
+    background-image: linear-gradient(120deg,  #1b4f72,   #1d8348)
+}
+
+.bar{
+    background: #283747; 
+    color: white; 
+    font-family: 'Saira Stencil One', cursive;
+    position: sticky;
+    top: 0;
+}
+
+.sub-col{
+    font-size: 20px; 
+    font-family: 'Patua One', cursive;
+    margin: 10px;
+    padding-left: 15px;
+    border-left: solid;
+    border-color:#aeb6bf;
+}
+
+h1{
+    font-family: 'Saira Stencil One', cursive;
+    color: white;
+}
+
+p{ 
+    font-family: 'Patua One', cursive;
+    font-size: 20px;
+}
+
+html{
+    scroll-behavior: smooth
+}
+
+.header{
+    background-color:  #d1f2eb ; 
+    border-radius: 10px; 
+    padding: 20px; 
+    margin-top: 20px; 
+    text-align: center;
+    font-family: 'Patua One', cursive; 
+    font-size: 40px
+}
+
+a:visited{
+    color: unset;    
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.facebook:hover{
+    color: #3b5998;
+}
+
+.upIcon:hover, .personalIcon:hover{
+    background-color:#aab7b8 ;
+}
+.sub-col:hover{
+    color: #aab7b8;
+}
+
+#home:hover{
+    text-decoration: none;
+    color: white;
+}
+
+#sub:hover{
+    text-decoration: none;
+    color: #aab7b8;
+}

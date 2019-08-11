@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/spty.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Kanit|Patua+One|Saira+Stencil+One&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>css_specificity</title>
+</head>
+<body>
+    <div class="bar row sticky" style="font-size: 30px">
+        <div class="col-3">
+            <a id="home" href="index.html" style="margin: 15px">Thiracupt3310</a>     
+        </div>
+        <div class="col-1.5 sub-col" style="margin-left: 100px;">
+            <a id="sub" href="css_specificity.html">CSS Specificity</a>
+        </div>
+    </div>     
+
+    <div class="container header" >
+        <i class="material-icons" style="color: skyblue; border: solid; font-size: 50px">book</i> CSS Specificity
+    </div>
+
+    <div class="container" style="background-color: #d1f2eb; border-radius: 10px; margin-top: 20px; padding-top: 20px;">
+        <pre style=" font-family: 'Kanit', sans-serif;font-size: 25px; text-align: center">
+
+            CSS Specificity เหมือนกับการเทียบลำดับความสำคัญของ selector ใน css
+            ซึ่งปกติแล้ว css จะมีการอ่าน code เหมือนภาษาอื่นๆ ทั่วไป คืออ่านจาก
+            บนลงล่าง แต่ถ้าเขียน code โดยที่มีการทำลำดับความสำคัญก็อาจจะทำให้
+            สิ่งที่เขียนไปไม่แสดงผลได้ เช่น
+            <img src="image/code.png" alt="code">
+            ผลลัพธ์ที่ได้
+            <img src="image/result.png" alt="result">
+            จะเห็นได้ว่าถึงแม้ class selector จะอยู่ล่างสุด แต่ที่แสดงผล
+            กลับเป็นของ id selector เพราะ id selector มีความสำคัญมากกว่าทำให้
+            class ไม่สามารถไปเขียนทับได้ ซึ่งลำดับความสำคัญของ selector 
+            มีดังนี้
+            Inline Style > Id Selector > Class Selector > Element(html tag)
+
+        </pre>
+    </div>
+
+    <div class="bar" style="text-align: center; margin-top: 40px; padding: 10px">
+        <a href="https://www.facebook.com/thiracup.ponngern" target="_blank">
+            <i class="fa fa-facebook-square facebook" style="font-size: 15px"> Thiracup ponngern</i>
+        </a>
+        <i class="material-icons" style="padding-left: 20px; font-size: 15px; ">email</i> thiracupt.p@ku.th
+    </div>
+</body>
+
+</html>
