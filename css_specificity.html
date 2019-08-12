@@ -27,22 +27,43 @@
     </div>
 
     <div class="container" style="background-color: #d1f2eb; border-radius: 10px; margin-top: 20px; padding-top: 20px;">
-        <pre style=" font-family: 'Kanit', sans-serif;font-size: 25px; text-align: center">
+        <pre style=" font-family: 'Kanit', sans-serif;font-size: 25px">
 
-            CSS Specificity เหมือนกับการเทียบลำดับความสำคัญของ selector ใน css
-            ซึ่งปกติแล้ว css จะมีการอ่าน code เหมือนภาษาอื่นๆ ทั่วไป คืออ่านจาก
-            บนลงล่าง แต่ถ้าเขียน code โดยที่มีการทำลำดับความสำคัญก็อาจจะทำให้
-            สิ่งที่เขียนไปไม่แสดงผลได้ เช่น
+            CSS Specificity เป็นเหมือนค่าที่ทำให้หน้าเว็บเราเลือกว่าจะใช้ Style อันไหน
+            ซึ่งมีหลักการคือถ้าค่าไหนมากกว่าก็นำค่านั้นมาแสดงผล และวิธีการคำนวณค่าตรงนี้
+            คือ เราจะสมมุติค่าใน Style ขึ้นมาดังนี้
+            - Inline Style มีค่า 1000
+            - ID selector ทีค่า 100
+            - Class selector มีค่า 10
+            - All tag html มีค่า 1
+            ทีนี้ถ้ามีค่าพวกนี้ซ้อนกันหลายชั้น เราจำนำค่าพวกนี้มาบวกกัน เช่น
+            <img src="image/case1.png" alt="case1"> มีค่า = 1(body)+1(h1) = 2
+            <img src="image/case2.png" alt="case2"> มีค่า = 100(#red)+10(.box) = 110
+            <img src="image/case3.png" alt="case3"> มีค่า = 1(div)+10(.box) = 11
+
+            เพื่อพิสูจน์ เราได้ยกตัวอย่าง code ง่ายๆ 
+            ว่าสิ่งที่เขียนไปข้างบนมีการเลือกค่าที่มากกว่ามาแสดงผลจริงๆ คือ
+
+            ตัวอย่างที่ 1
             <img src="image/code.png" alt="code">
             ผลลัพธ์ที่ได้
             <img src="image/result.png" alt="result">
-            จะเห็นได้ว่าถึงแม้ class selector จะอยู่ล่างสุด แต่ที่แสดงผล
-            กลับเป็นของ id selector เพราะ id selector มีความสำคัญมากกว่าทำให้
-            class ไม่สามารถไปเขียนทับได้ ซึ่งลำดับความสำคัญของ selector 
-            มีดังนี้
-            Inline Style > Id Selector > Class Selector > Element(html tag)
+            จะเห็นได้ว่า กล่องที่ออกมาเขียวสีเขียว ถึงจะเขียนทับไปแล้วว่าให้เป็นสีแดง
+            เพราะว่า ส่วนที่เป็น #green มีค่าถึง 100 แต่ .red มีค่าแค่ 10 เท่านั้นเอง
+            จึงไม่สามารถเอาชนะค่า #green ได้ จึงทำให้กล่องไม่ออกมาเป็นสีแดงถึงแม้จะถูกทับแล้วก็ตาม
 
-           
+            ตัวอย่างที่ 2
+            <img src="image/code2.png" alt="code2">
+            ผลลัพธ์ที่ได้
+            <img src="image/result2.png" alt="result2">
+            จะเห็นได้ว่า กล่องเป็นสีแดง เพราะ div.box มีค่าเป็น 11(10+1)
+            .box มีค่า 10 น้อยกว่า div.box จึงทำให้กล่องเป็นสีแดง
+            
+            ถ้าจะให้สรุปหลักการของ CSS Specificity ง่ายๆด้วยเหตุและผลก็คือ ยิ่งเขียน Style
+            ให้เจาะจงมากก็ยิ่งทำให้มีโอกาสได้แสดงมาก
+
+            -END-
+
             ที่มา: <a href="https://www.designil.com/css-specificity-and-hack.html" target="_blank">https://www.designil.com/css-specificity-and-hack.html</a>
         </pre>
     </div>
